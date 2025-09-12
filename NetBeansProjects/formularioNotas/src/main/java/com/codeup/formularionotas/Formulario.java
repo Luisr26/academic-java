@@ -221,17 +221,7 @@ public class Formulario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        model.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
-            @Override
-            public void valueChanged(ListSelectionEvent lse) {
-                int filaSeleccionada = model.getSelectedRow();
-                
-                if(filaSeleccionada >= 0){
-                    nameField.setText();
-                }
-            }
-            
-        });
+        
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
@@ -249,9 +239,9 @@ public class Formulario extends javax.swing.JFrame {
         if(nota1 > nota2 && nota1 > nota3 ){
             notaAlta = nota1;
         }else if(nota2 > nota1 && nota2 > nota3){
-            notaAlta = nota1;
+            notaAlta = nota2;
         }else{
-            notaAlta = nota1;
+            notaAlta = nota3;
         }
         
         // Revisar cual nota es la mas baja
